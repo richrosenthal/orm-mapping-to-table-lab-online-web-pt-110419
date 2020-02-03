@@ -35,7 +35,7 @@ class Student
     SQL
  
     DB[:conn].execute(sql, self.name, self.grade)
-    sql 
+    @id = DB[:conn].execute("SELECT MAX(ID) AS LastID FROM students")[0][0]
   end
   
   def self.create(:name, :grade)
