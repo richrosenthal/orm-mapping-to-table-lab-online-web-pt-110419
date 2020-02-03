@@ -38,4 +38,7 @@ class Student
     sql 
   end
   
+  def self.create(:name, :grade)
+    
+  
 end
